@@ -1,27 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace FlyFishingApp
 {
-    public class FlyFishingReader
+    public class FlyFishing : IFlyFishing
     {
-        public int Id { get; set; }
-        public string Fly { get; set; }
-        public int Size { get; set; }
-        public string Month { get; set; }
-        public bool CanUseFly { get; set; }
+        private readonly string _filePath;
 
-        public ICollection<FlyFishingResult> FlyFishingResults { get; set; }
+        public FlyFishing(string path)
+        {
+            _filePath = path;
+        }
     }
 
-    public class FlyFishingResult
+    public string ReadFromFile()
     {
-        public string Fly { get; set; }
-        public int Size { get; set; }
-        public string Month { get; set; }
+        string flyContents = "";
+
+        using (StreamReader reader = new StreamReader(_filePath))
+        {
+            flyContents = reader.ReadToEnd();
+        }
+
+        return flyContents;
     }
 
-}
+    public void WriteToFile(string value)
+    {
+        using (StreamWriter writer = new StreamWriter(_filePath))
+        {
+            writer.Write(value);
+        }
+    }
+} 
