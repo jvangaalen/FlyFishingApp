@@ -15,9 +15,9 @@ namespace FlyFishingApp
         {
             _filePath = path;
         }
-    }
 
     public string ReadFromFile()
+    }
     {
         string flyContents = "";
 
