@@ -1,8 +1,11 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace FlyFishingApp
 {
@@ -10,9 +13,12 @@ namespace FlyFishingApp
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a file name:");
-            string fileName = Console.ReadLine();
-            fileName = fileName + ".txt";
-        }      
+            List<Name> names;
+            using (var streamReader = new StreamReader("../../HatchChart.csv"))
+            using (var reader = new CsvReader(streamReader))
+            {
+                names = reader.GetRecords<Name>().ToList();
+            }
+        }
     }
 }
