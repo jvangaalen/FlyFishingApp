@@ -13,11 +13,12 @@ namespace FlyFishingApp
     {
         static void Main(string[] args)
         {
-            List<Name> names;
+            List<XName> names;
             using (var streamReader = new StreamReader("../../HatchChart.csv"))
             using (var reader = new CsvReader(streamReader))
             {
-                names = reader.GetRecords<Name>().ToList();
+                reader.Configuration.RegisterClassMap<FlyMap>();
+                names = reader.GetRecords<XName>().ToList();
             }
         }
     }
