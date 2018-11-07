@@ -7,33 +7,22 @@ using System.Threading.Tasks;
 
 namespace FlyFishingApp
 {
-    public class FlyFishing : IFlyFishing
+    public class FlyFishing
     {
-        private readonly string _filePath;
-
-        public FlyFishing(string path)
-        {
-            _filePath = path;
-        }
-
-    public string ReadFromFile()
+        public string Name { get; set;  }
+        public int Size { get; set;  }
+        public bool January { get; set; }
+        public bool February { get; set; }
+        public bool March { get; set; }
+        public bool April { get; set; }
+        public bool May { get; set; }
+        public bool June { get; set; }
+        public bool July { get; set; }
+        public bool August { get; set; }
+        public bool September { get; set; }
+        public bool October { get; set; }
+        public bool November { get; set; }
+        public bool December { get; set; }
     }
-    {
-        string flyContents = "";
-
-        using (StreamReader reader = new StreamReader(_filePath))
-        {
-            flyContents = reader.ReadToEnd();
-        }
-
-        return flyContents;
-    }
-
-    public void WriteToFile(string value)
-    {
-        using (StreamWriter writer = new StreamWriter(_filePath))
-        {
-            writer.Write(value);
-        }
-    }
-} 
+}
+        
