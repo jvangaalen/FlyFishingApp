@@ -20,6 +20,19 @@ namespace FlyFishingApp
                 reader.Configuration.RegisterClassMap<FlyMap>();
                 names = reader.GetRecords<XName>().ToList();
             }
+
+            string currentDirectory = Directory.GetCurrentDirectory();
+            DirectoryInfo directory = new DirectoryInfo(currentDirectory);
+            string fileToWrite = Path.Combine(directory.FullName, "flyResult.txt");
+
+            Console.WriteLine("Welcome to the fly fishing App!");
+            Console.WriteLine("Please select the month you would like to go fishing to return a list of flies " +
+                             "that are active along with the recommended fly size.");
+            Console.WriteLine("Please press Q to exit the program.");
+            //while (input.ToLower() != "q")
+           // {
+                //flyResults = 
+           // }
         }
     }
 }

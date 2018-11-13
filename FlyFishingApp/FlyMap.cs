@@ -14,6 +14,7 @@ namespace FlyFishingApp
         {
             Map(x => x.Name).Name("Name");
             Map(x => x.Size).Name("Size");
+
             Map(x => x.January).Name("January");
             Map(x => x.February).Name("February");
             Map(x => x.March).Name("March");
