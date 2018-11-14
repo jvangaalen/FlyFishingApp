@@ -10,7 +10,7 @@ using System.Xml.Linq;
 namespace FlyFishingApp
 {
     class Program
-    {
+    {      
         static void Main(string[] args)
         {
             List<FlyFishing> names;
@@ -27,7 +27,7 @@ namespace FlyFishingApp
 
             Console.WriteLine("Welcome to the fly fishing App!");
             Console.WriteLine("Please select the month you would like to go fishing to return a list of flies " +
-                             "that are active along with the recommended fly size.");
+                             "that are active.");
             Console.WriteLine("Please press Q to exit the program.");
 
             var input = Console.ReadLine();

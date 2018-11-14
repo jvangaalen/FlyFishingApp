@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace FlyFishingApp
 {
     public class FlyFishing
-    {
+    { 
         public string Name { get; set;  }
         public string Size { get; set;  }
         public bool January { get; set; }
