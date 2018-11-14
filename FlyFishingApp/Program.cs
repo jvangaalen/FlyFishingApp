@@ -42,7 +42,7 @@ namespace FlyFishingApp
                         names.Where(Flies => Flies.February).ToList();
                         break;
                     case "March":
-                        names.Where(Flies =>Flies.March).ToList();
+                        names.Where(Flies => Flies.March).ToList();
                         break;
                     case "April":
                         names.Where(Flies => Flies.April).ToList();
@@ -72,9 +72,14 @@ namespace FlyFishingApp
                         names.Where(Flies => Flies.December).ToList();
                         break;
                     default:
-                        break;                   
-                }
+                        break;
+                }               
+                    using (StreamWriter writer = new StreamWriter("Result.txt"))
+                    {
+                        writer.Write(input);
+                    }
 
+                //Console.WriteLine();
             }
         }
     }
