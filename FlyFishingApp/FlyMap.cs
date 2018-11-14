@@ -15,21 +15,221 @@ namespace FlyFishingApp
             Map(x => x.Name).Name("Name");
             Map(x => x.Size).Name("Size");
 
-            Map(x => x.January).Name("January");
-            Map(x => x.February).Name("February");
-            Map(x => x.March).Name("March");
-            Map(x => x.April).Name("April");
-            Map(x => x.May).Name("May");
-            Map(x => x.June).Name("June");
-            Map(x => x.July).Name("July");
-            Map(x => x.August).Name("August");
-            Map(x => x.September).Name("September");
-            Map(x => x.October).Name("October");
-            Map(x => x.November).Name("November");
-            Map(x => x.December).Name("December");
+            Map(x => x.January).Name("January")
+                .ConvertUsing(row =>
+                {
+                    //return row.January ? "yes" : "no";
+                    if (row.January)
+                    {
+                        return "yes";
+                    }
+                    else
+                    {
+                        return "no";
+                    }
 
+                    // Get the data in the row
+                    //return this
+                    //var data = row.GetField("January");
 
+                    //// If the data value is NULL, set the value to actual null
+                    //if (data == "no")
+                    //{
+                    //    return null;
+                    //}
+                    //// Otherwise, parse the string into an int
+                    //else
+                    //{
+                    //    return bool.Parse(data);
+                    //}
+                });
+            Map(x => x.February).Name("February")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("February");
 
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.March).Name("March")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("March");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.April).Name("April")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("April");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.May).Name("May")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("May");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.June).Name("June")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("June");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.July).Name("July")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("July");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.August).Name("August")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("August");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.September).Name("September")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("September");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.October).Name("October")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("October");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.November).Name("November")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("November");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
+            Map(x => x.December).Name("December")
+                .ConvertUsing(row =>
+                {
+                    // Get the data in the row
+                    var data = row.GetField("December");
+
+                    // If the data value is NULL, set the value to actual null
+                    if (data == "no")
+                    {
+                        return null;
+                    }
+                    // Otherwise, parse the string into an int
+                    else
+                    {
+                        return bool.Parse(data);
+                    }
+                });
         }
    }
 }

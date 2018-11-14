@@ -11,7 +11,7 @@ namespace FlyFishingApp
     public class FlyFishing
     {
         public string Name { get; set;  }
-        public int Size { get; set;  }
+        public string Size { get; set;  }
         public bool January { get; set; }
         public bool February { get; set; }
         public bool March { get; set; }
