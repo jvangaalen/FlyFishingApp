@@ -39,53 +39,7 @@ namespace FlyFishingApp
 
             // Gets the input
             var input = Console.ReadLine();
-            // keeps going unless user enters q
-            while (input.ToLower() != "q")
-            {
-                switch (input.ToLower())
-                {
-                    case "january":
-                        // Combines Month with flies(for each month)
-                        names.Where(Flies => Flies.January).ToList();
-                        break;
-                    case "february":
-                        names.Where(Flies => Flies.February).ToList();
-                        break;
-                    case "march":
-                        names.Where(Flies => Flies.March).ToList();
-                        break;
-                    case "april":
-                        names.Where(Flies => Flies.April).ToList();
-                        break;
-                    case "may":
-                        names.Where(Flies => Flies.May).ToList();
-                        break;
-                    case "june":
-                        names.Where(Flies => Flies.June).ToList();
-                        break;
-                    case "July":
-                        names.Where(Flies => Flies.July).ToList();
-                        break;
-                    case "august":
-                        names.Where(Flies => Flies.August).ToList();
-                        break;
-                    case "september":
-                        names.Where(Flies => Flies.September).ToList();
-                        break;
-                    case "october":
-                        names.Where(Flies => Flies.October).ToList();
-                        break;
-                    case "november":
-                        names.Where(Flies => Flies.November).ToList();
-                        break;
-                    case "december":
-                        names.Where(Flies => Flies.December).ToList();
-                        break;
-                    default:
-                        break;
-                }
-                input = Console.ReadLine();
-            }
+            
 
             List<FlyFishing> listToWrite = new List<FlyFishing>();
             //var result = Console.WriteLine();
@@ -95,69 +49,88 @@ namespace FlyFishingApp
                 {
                     case "january":
                         //Prints the list(for each month)
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.January).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
+                        
                         break;
                     case "february":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.February).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "march":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.March).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "april":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.April).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "may":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.May).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "june":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.June).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "july":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.July).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "august":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.August).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "september":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.September).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "october":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.October).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "november":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.November).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     case "december":
-                        PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.December).ToList();
+                        PrintResult(listToWrite);
+                        SaveResult(listToWrite);
                         break;
                     default:
                         break;
                 }
+                input = Console.ReadLine();
             }
-            using (StreamWriter stream = new StreamWriter("Result.csv"))
-            using (CsvWriter csvWriter = new CsvWriter(stream))
-            {
-                csvWriter.WriteRecords(listToWrite);
-            }
+            
         }
         // Prints the list to the console
+
         private static void PrintResult(List<FlyFishing> names)
         {
             foreach (var name in names)
             {
-                Console.WriteLine(name.ToString());
+                Console.WriteLine(name.Name);
+            }
+        }
+        private static void SaveResult(List<FlyFishing> names)
+        {
+            using (StreamWriter stream = new StreamWriter("Result.csv"))
+            using (CsvWriter csvWriter = new CsvWriter(stream))
+            {
+                csvWriter.WriteRecords(names);
             }
         }
     }
