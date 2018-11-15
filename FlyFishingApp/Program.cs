@@ -84,12 +84,13 @@ namespace FlyFishingApp
                     default:
                         break;
                 }
-                //input = Console.ReadLine();
+                input = Console.ReadLine();
             }
+
             List<FlyFishing> listToWrite = new List<FlyFishing>();
             //var result = Console.WriteLine();
-            while (input.ToLower() ! = "q")
-                {
+            while (input.ToLower() != "q")
+            {
                 switch (input.ToLower())
                 {
                     case "january":
@@ -145,12 +146,12 @@ namespace FlyFishingApp
                         break;
                 }
             }
-
             using (StreamWriter stream = new StreamWriter("Result.csv"))
-            using (CsvWriter csvWriter = new CsvWriter(stream)
+            using (CsvWriter csvWriter = new CsvWriter(stream))
             {
                 csvWriter.WriteRecords(listToWrite);
             }
+        }
         // Prints the list to the console
         private static void PrintResult(List<FlyFishing> names)
         {
@@ -160,7 +161,10 @@ namespace FlyFishingApp
             }
         }
     }
- }
+}
+
+ 
+ 
 
 
 
