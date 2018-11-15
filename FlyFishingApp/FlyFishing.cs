@@ -25,27 +25,27 @@ namespace FlyFishingApp
         public bool November { get; set; }
         public bool December { get; set; }
 
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
+        //public override string ToString()
+        //{
+        //    StringBuilder sb = new StringBuilder();
 
-            sb.Append("\nName: ").Append(Name)
-                .Append("\nSize: ").Append(Size)
-                .Append("\nJanuary: ").Append(January)
-                .Append("\nFebruary: ").Append(February)
-                .Append("\nMarch: ").Append(March)
-                .Append("\nApril: ").Append(April)
-                .Append("\nMay: ").Append(May)
-                .Append("\nJune: ").Append(June)
-                .Append("\nJuly: ").Append(July)
-                .Append("\nAugust: ").Append(August)
-                .Append("\nSeptember: ").Append(September)
-                .Append("\nOctober: ").Append(October)
-                .Append("\nNovember: ").Append(November)
-                .Append("\nDecember: ").Append(December);
+        //    sb.Append("\nName: ").Append(Name)
+        //        .Append("\nSize: ").Append(Size)
+        //        .Append("\nJanuary: ").Append(January)
+        //        .Append("\nFebruary: ").Append(February)
+        //        .Append("\nMarch: ").Append(March)
+        //        .Append("\nApril: ").Append(April)
+        //        .Append("\nMay: ").Append(May)
+        //        .Append("\nJune: ").Append(June)
+        //        .Append("\nJuly: ").Append(July)
+        //        .Append("\nAugust: ").Append(August)
+        //        .Append("\nSeptember: ").Append(September)
+        //        .Append("\nOctober: ").Append(October)
+        //        .Append("\nNovember: ").Append(November)
+        //        .Append("\nDecember: ").Append(December);
 
-            return sb.ToString();
-        }
+        //    return sb.ToString();
+        //}
     }
 }
         

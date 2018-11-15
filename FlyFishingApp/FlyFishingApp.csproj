@@ -62,7 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="flyResult.txt" />
-    <Content Include="Result.txt" />
+    <None Include="Result.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
