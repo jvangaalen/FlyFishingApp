@@ -44,54 +44,41 @@ namespace FlyFishingApp
             {
                 switch (input.ToLower())
                 {
-                    case "January":
-
-
+                    case "january":
                         // Combines Month with flies(for each month)
                         names.Where(Flies => Flies.January).ToList();
                         break;
-                    case "February":
-
+                    case "february":
                         names.Where(Flies => Flies.February).ToList();
                         break;
-                    case "March":
-
+                    case "march":
                         names.Where(Flies => Flies.March).ToList();
                         break;
-                    case "April":
-
+                    case "april":
                         names.Where(Flies => Flies.April).ToList();
                         break;
-                    case "May":
-
+                    case "may":
                         names.Where(Flies => Flies.May).ToList();
                         break;
-                    case "June":
-
+                    case "june":
                         names.Where(Flies => Flies.June).ToList();
                         break;
                     case "July":
-
                         names.Where(Flies => Flies.July).ToList();
                         break;
-                    case "August":
-
+                    case "august":
                         names.Where(Flies => Flies.August).ToList();
                         break;
-                    case "September":
-
+                    case "september":
                         names.Where(Flies => Flies.September).ToList();
                         break;
-                    case "October":
-
+                    case "october":
                         names.Where(Flies => Flies.October).ToList();
                         break;
-                    case "November":
-
+                    case "november":
                         names.Where(Flies => Flies.November).ToList();
                         break;
-                    case "December":
-
+                    case "december":
                         names.Where(Flies => Flies.December).ToList();
                         break;
                     default:
@@ -105,52 +92,52 @@ namespace FlyFishingApp
                 {
                 switch (input.ToLower())
                 {
-                    case "January":
+                    case "january":
                         //Prints the list(for each month)
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.January).ToList();
                         break;
-                    case "February":
+                    case "february":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.February).ToList();
                         break;
-                    case "March":
+                    case "march":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.March).ToList();
                         break;
-                    case "April":
+                    case "april":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.April).ToList();
                         break;
-                    case "May":
+                    case "may":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.May).ToList();
                         break;
-                    case "June":
+                    case "june":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.June).ToList();
                         break;
-                    case "July":
+                    case "july":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.July).ToList();
                         break;
-                    case "August":
+                    case "august":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.August).ToList();
                         break;
-                    case "September":
+                    case "september":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.September).ToList();
                         break;
-                    case "October":
+                    case "october":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.October).ToList();
                         break;
-                    case "November":
+                    case "november":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.November).ToList();
                         break;
-                    case "December":
+                    case "december":
                         PrintResult(names);
                         listToWrite = names.Where(Flies => Flies.December).ToList();
                         break;
